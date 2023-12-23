@@ -90,21 +90,21 @@ const List = (props) => {
                     }
                 </tbody>
             </table> */}
-            <div class="col-lg-12 grid-margin stretch-card">
-                    <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Striped Table</h4>
-                        <p class="card-description"> Add class <code>.table-striped</code></p>
+            <div className="col-lg-12 grid-margin stretch-card">
+                    <div className="card">
+                    <div className="card-body">
+                        <h4 className="card-title">Striped Table</h4>
+                        <p className="card-description"> Add class <code>.table-striped</code></p>
                         <table>
                             <thead>
                                 <tr>
                                     <th><a href="/add" className="btn btn-primary">Thêm Tin Tức</a></th>
                                     <th><a href="/listCategory" className="btn btn-primary">Xem Danh Mục</a></th>
-                                    <th><button onClick={logout} type="button" class="btn btn-primary">Đăng xuất</button></th>
+                                    <th><button onClick={logout} type="button" className="btn btn-primary">Đăng xuất</button></th>
                                 </tr>
                             </thead>
                         </table>
-                        <table class="table table-striped">
+                        <table className="table table-striped">
                         
                         <thead>
                             <tr>
