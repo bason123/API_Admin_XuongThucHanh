@@ -1,6 +1,10 @@
 {
   "name": "web-admin",
   "version": "0.1.0",
+  "engines": {
+    "node": "20.9.0",
+    "npm": "10.1.0"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

@@ -90,37 +90,38 @@ const Edit = (props) => {
                 setImage(result.data.image);
                 setCategory_id(result.data.category_id);
 
-                setImageReview(result.image);
+                setImageReview(result.data.image);
+                
             } catch (error) {
                 console.log(error);
             }
         }
         getProducts();
     }, []);
-
+    console.log(imageReview)
     return(
         <div>
             <form>
                 <div className="mb-3 mt-3">
                     <label className="form-label">Tiêu đề :</label>
-                    <input type='text' value={title.split(' ').slice(0, 10).join(' ') + "..."} className="form-control"
+                    <input type='text' value={title} className="form-control"
                         onChange={(e) => setTitle(e.target.value)} />
                 </div>
                 <div className="mb-3 mt-3">
                     <label className="form-label">Nội dung:</label>
-                    <input type='text' value={content.split(' ').slice(0, 25).join(' ') + "..."} className="form-control"
+                    <input type='text' value={content} className="form-control"
                         onChange={(e) => setContent(e.target.value)} />
                 </div>
                 <div className="mb-3 mt-3">
                     <label className="form-label">Hình ảnh:</label>
                     <input type='file' className="form-control"
                         onChange={(e) => handleImage(e) }/>
-                        <img className="mb-3 mt-3" src={imageReview} alt={imageReview} width="500"/>
+                        <img className="mb-3 mt-3" src={imageReview} alt={imageReview} width="300" height="300"/>
                 </div>
                 <div className="mb-3 mt-3">
                     <label className="form-label">Danh mục:</label>                   
                     <select value={category_id} className="form-control"
-                        onChange={(e) => setCategory_id(e.target.value)}>
+                        onChange={(e) => setCategory_id(e.target.value)}>   
                         {
                             categories.map((category, index) => (
                                 <option key={index} value={category._id}>{category.name}</option>
