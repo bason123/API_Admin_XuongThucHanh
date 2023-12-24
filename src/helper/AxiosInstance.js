@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const AxiosInstance = (contentType = 'application/json') => {
     const axiosInstance = axios.create({
-        baseURL: 'http://localhost:8686/'
+        baseURL: 'https://xuongthuchanh-0c7bce62755d.herokuapp.com/'
     });
 
     axiosInstance.interceptors.request.use(
